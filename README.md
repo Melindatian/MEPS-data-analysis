@@ -1,41 +1,43 @@
 # Project Title
 
-Assessing the Effectiveness of Influenza Vaccination – influence function approach for comparative studies using publicly available medical expenditure data
+Procedural development for comparative studies to assess the effectiveness of influenza vaccination using publicly available medical expenditure data
 
 ## Description
 
-Basic codes for Medical Expenditure Panel Survey (MEPS) data analysis applications, as introduced by paper 'Assessing the Effectiveness of Influenza Vaccination – influence function approach for comparative studies using publicly available medical expenditure data'.
+Basic codes for Medical Expenditure Panel Survey (MEPS) data analysis applications, as introduced by the paper 'Procedural development for comparative studies to assess the effectiveness of influenza vaccination using publicly available medical expenditure data'.
 
 # Introdcution
 ## Abstract
-The medical care expenditure is historically an important public health issue, which greatly impacts the government’s health policies as well as patients’ financial and medical decisions. In population health research, we commonly discretize a numeric attribute to a few ordinal groups to examine population characteristics. Oftentimes, the population marginal mean estimation by the ANOVA approach is inflexible since it uses pre-defined grouping of the covariate. In this paper, we propose a method to estimate the population marginal mean using the B-spline-based regression in a manner of a generalized additive model as an alternative for the ANOVA. Since the medical expenditure is always nonnegative, a Bayesian approach is also implemented for the nonnegative constraint on the marginal mean estimates. The proposed method is flexible to estimate marginal means for user-specified grouping after model fitting in a post-hoc manner, a clear advantage over the ANOVA approach. We show that this method is inferentially superior to the ANOVA through theoretical investigations and an extensive Monte Carlo study. The real data analysis using Medical Expenditure Panel Survey data assisted by some visualization tools demonstrates an applicability of the proposed approach and leads us some interesting observations that may be relevant to public health discussions. 
+It is always challenging to estimate the ever-changing influenza vaccine effectiveness (VE) in the general population. Given the lack of randomized controlled trials in the general population, national-level publicly available survey data is a feasible source to assess the VE. When utilizing complex survey data, it is important to identify robust methods for VE estimation and relevant inference with procedural discussions for handling unbalanced data. We investigate a broad range of data-balancing techniques with the implementation of influence function (IF) methods, where the IF method allows us to easily estimate the variability for the relative risk (RR) estimates in the complex survey setting. We conduct an extensive simulation study to evaluate these approaches and discuss techniques that show robust inferential performance across various model assumptions. Upon implementation of IF methods and data-balancing techniques, a simple approach such as contingency-table-based RR estimation yields a comparable result to the generalized linear model approach. We demonstrate the applicability of the proposed methods for complex survey data using 2000-2016 Medical Expenditure Panel Survey (MEPS) data. In a further study, we find a significant association between the VE estimates and influenza-incurred expenditures. 
+
 ## Keywords
-B-spline, Generalized additive model (GAM), Nonnegative constraints, Bayesian method, Medical Expenditure Panel Survey (MEPS), Population marginal mean (PMM), Survey design
+Complex survey data; Imbalanced data; Influence function; Influenza vaccine effectiveness; Propensity score methods; Relative risk; Influenza-associated expenditure
 
 
-## Getting Started
+# Getting Started
 
-### Dependencies
+## Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* R (>= 3.5.0)
+* required package: dplyr, survey
 
-### Installing
+## Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Download the R and Data package from Github
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+* 1. data. R is used for the loaded example dataset
+* 2. run helper. R 
+* 3. run survey_matching.R if you need propensity scores matching
+* 4. IF_ct.R provides RR estimation using the contingency table method
+* 5. IF_model.R provides RR estimation using parametric models. There are three choices: logistic regression, log-binomial regression, and probit regression.
 ```
 code blocks for commands
 ```
 
 ## Help
 
-Any advise for common problems or issues.
 ```
 command to run if program contains helper info
 ```
@@ -49,20 +51,16 @@ Dr.Jihnhee Yu
 
 
 # Version History
-
-
 * 0.1
     * Initial Release
 
 # License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the [GPL-2] License - see the LICENSE.md file for details
 
 # Acknowledgments
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [dplyr](https://github.com/tidyverse/dplyr)
+* [survey](https://cran.r-project.org/web/packages/survey/index.html)
+
