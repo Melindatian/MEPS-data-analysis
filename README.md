@@ -1,6 +1,6 @@
-# Assessing the Effectiveness of Influenza Vaccination – influence function approach for comparative studies using publicly available medical expenditure data
+# Project Title
 
-MEPS data analysis
+Assessing the Effectiveness of Influenza Vaccination – influence function approach for comparative studies using publicly available medical expenditure data
 
 ## Description
 
