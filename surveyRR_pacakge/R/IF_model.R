@@ -36,7 +36,7 @@
 #'  weights = ~LONGWT,
 #'  data = mepsRR,
 #'  nest = TRUE)
-#'  logit_rr_if(treatment="binary_flushot",response="disease_status",data=mepsRR,design=CTdsgn,
+#'  svyglm_rr_if(treatment="binary_flushot",response="disease_status",data=mepsRR,design=CTdsgn,
 #'              formula=disease_status~binary_flushot)
 #'
 #' @export
