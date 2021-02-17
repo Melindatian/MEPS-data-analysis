@@ -27,11 +27,11 @@ Complex survey data; Imbalanced data; Influence function; Influenza vaccine effe
 
 ### Executing program
 
-* 1. data. R is used for the loaded example dataset
-* 2. run helper. R 
-* 3. run survey_matching.R if you need propensity scores matching
-* 4. IF_ct.R provides RR estimation using the contingency table method
-* 5. IF_model.R provides RR estimation using parametric models. There are three choices: logistic regression, log-binomial regression, and probit regression.
+*1. data. R is used for the loaded example dataset
+*2. run helper. R 
+*3. run survey_matching.R if you need propensity scores matching
+*4. IF_ct.R provides RR estimation using the contingency table method
+*5. IF_model.R provides RR estimation using parametric models. There are three choices: logistic regression, log-binomial regression, and probit regression.
 ```
 code blocks for commands
 ```
