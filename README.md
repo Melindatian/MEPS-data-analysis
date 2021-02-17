@@ -31,7 +31,7 @@ Complex survey data; Imbalanced data; Influence function; Influenza vaccine effe
 *  Run helper. R 
 *  Run survey_matching.R if you need propensity scores matching
 *  The IF_ct.R file provides RR estimation using the contingency table method
-*  The IF_model.R file provides RR estimation using parametric models. There are three choices: logistic regression, log-binomial regression, and probit regression.
+*  The IF_model.R file provides RR estimation using parametric models. There are three choices: logistic regression, log-binomial regression, and probit regression. The default model is the logistic regression.
 ```
 #example
 library(survey)
@@ -44,7 +44,7 @@ CTdsgn <- svydesign(
   weights = ~LONGWT,
   data = mepsRR,
   nest = TRUE)
-  logit_rr_if(treatment="binary_flushot",response="disease_status",data=mepsRR,design=CTdsgn,
+  svyglm_rr_if(treatment="binary_flushot",response="disease_status",data=mepsRR,design=CTdsgn,
               formula=disease_status~binary_flushot)
 
 
