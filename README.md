@@ -1,14 +1,14 @@
 # Project Title
 
-Procedural development for comparative studies to assess the effectiveness of influenza vaccination using publicly available medical expenditure data
+Influence function methods to assess the effectiveness of influenza vaccine with survey data
 
 ## Description
 
-Basic codes for Medical Expenditure Panel Survey (MEPS) data analysis applications, as introduced by the paper 'Procedural development for comparative studies to assess the effectiveness of influenza vaccination using publicly available medical expenditure data'.
+Basic codes for Medical Expenditure Panel Survey (MEPS) data analysis applications, as introduced by the paper 'Influence function methods to assess the effectiveness of influenza vaccine with survey data'. This paper is accepted by HSR journal (updpated:10/05/2021) and will be soon published online.
 
 # Introdcution
-## Abstract
-It is always challenging to estimate the ever-changing influenza vaccine effectiveness (VE) in the general population. Given the lack of randomized controlled trials in the general population, national-level publicly available survey data is a feasible source to assess the VE. When utilizing complex survey data, it is important to identify robust methods for VE estimation and relevant inference with procedural discussions for handling unbalanced data. We investigate a broad range of data-balancing techniques with the implementation of influence function (IF) methods, where the IF method allows us to easily estimate the variability for the relative risk (RR) estimates in the complex survey setting. We conduct an extensive simulation study to evaluate these approaches and discuss techniques that show robust inferential performance across various model assumptions. Upon implementation of IF methods and data-balancing techniques, a simple approach such as contingency-table-based RR estimation yields a comparable result to the generalized linear model approach. We demonstrate the applicability of the proposed methods for complex survey data using 2000-2016 Medical Expenditure Panel Survey (MEPS) data. In a further study, we find a significant association between the VE estimates and influenza-incurred expenditures. 
+## Background
+It is always challenging to estimate the ever-changing influenza vaccine effectiveness (VE) in the general population. Given the lack of randomized controlled trials in the general population, national-level publicly available survey data is a feasible source to assess the VE. When utilizing complex survey data, it is important to identify robust methods for VE estimation and relevant inference with procedural discussions for handling unbalanced data. We investigate a broad range of data-balancing techniques with the implementation of influence function (IF) methods, where the IF method allows us to easily estimate the variability for the relative risk (RR) estimates in the complex survey setting. Upon implementation of IF methods and data-balancing techniques, a simple approach such as contingency-table-based RR estimation yields a comparable result to the generalized linear model approach. We demonstrate the applicability of the proposed methods for complex survey data using 2000-2016 Medical Expenditure Panel Survey (MEPS) data. 
 
 ## Keywords
 Complex survey data; Imbalanced data; Influence function; Influenza vaccine effectiveness; Propensity score methods; Relative risk; Influenza-associated expenditure
@@ -25,16 +25,17 @@ Complex survey data; Imbalanced data; Influence function; Influenza vaccine effe
 
 * Download the R and Data package from Github
 
-### Executing program
+### Instructions
 
-*  The data. R file is used for the loaded example dataset
-*  Run helper. R 
-*  Run survey_matching.R if you need propensity scores matching
-*  The IF_ct.R file provides RR estimation using the contingency table method
+*  The data.R file is used for the loaded example dataset.
+*  Run helper.R .
+*  Run survey_matching.R if you need propensity scores matching.
+*  The IF_ct.R file provides RR estimation using the contingency table method.
 *  The IF_model.R file provides RR estimation using parametric models. There are three choices: logistic regression, log-binomial regression, and probit regression. The default model is the logistic regression.
 ```
 #example
 library(survey)
+library(dplyr)
 library(surveyRR)
 data("mepsRR")
 options(survey.lonely.psu="adjust")
@@ -62,7 +63,7 @@ options(survey.lonely.psu="adjust")
 Contributors names and contact info
 
 Mingmei Tian [mingmeit@buffalo.edu]
-Dr.Jihnhee Yu
+Jihnhee Yu
 
 
 # Version History
