@@ -25,7 +25,7 @@ Complex survey data; Imbalanced data; Influence function; Influenza vaccine effe
 
 * Download the R and Data package from Github
 
-### Instructions
+## Instructions
 
 *  The data.R file is used for the loaded example dataset.
 *  Run helper.R .
