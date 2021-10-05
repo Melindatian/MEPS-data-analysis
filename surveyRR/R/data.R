@@ -1,6 +1,6 @@
 #' Subset MEPS panel 10 data for RR estimation
 #'
-#' Data from the Medical Expenditure Panel Survey panel 10, modified for the RR study. The data has 9959 observations with 21 variables.
+#' Data from the Medical Expenditure Panel Survey panel 10, modified for the RR study. The data has 9959 observations with 21 variables. Note that , this data is an example data, not the one used in the published paper. If you need the whole dataset, please contact the author.
 #'
 #' @docType data
 #'
