@@ -24,6 +24,7 @@ Complex survey data; Imbalanced data; Influence function; Influenza vaccine effe
 ## Installing
 
 * Download the R and Data package from Github
+* If the 'data' function doesn't work, pleasse use load ("mepsRR.rda") to load the example data.
 
 ## Instructions
 
