@@ -53,7 +53,7 @@ CTdsgn <- svydesign(
 
 ## Help
 
-Using “adjust” option for lonely PSUs in R survey package
+Using the “adjust” option for lonely PSUs with the survey package
 ```
 options(survey.lonely.psu="adjust")
 ```
