@@ -1,8 +1,8 @@
 # MEPS-data-analysis survey RR package
 Package created for Medical Expenditure Panel Survey (MEPS) data 
 
-Paper : "Estimating model-based nonnegative population marginal means in application to medical expenditures covered by different health care policies – a study on Medical Expenditure Panel Survey"
+Paper : "Influence function methods to assess the effectiveness of influenza vaccine with survey data"
 
-Author: Mingmei Tian, Dr.Jihnhee Yu, Dr.Denise F. Lillvis, Dr. Albert Vexler
+Author: Mingmei Tian, Jihnhee Yu, Denise F. Lillvis, Albert Vexler
 
 This is a line from Rstudio
